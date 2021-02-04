@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
+ 
   get 'demo/index'
+
+  resources :subjects do
+    member do
+      get :delete
+    end
+  end
+
   get 'demo/hello'
   get 'demo/other_hello'
   
